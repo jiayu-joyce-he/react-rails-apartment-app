@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ nav {
+   margin-bottom: 0.3rem;
+ }
+
+ .App {
+   text-align: center;
+ }
+
+ .App-logo {
+   height: 40vmin;
+ }
+
+ .App-header {
+   background-color: #282c34;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
+ }
+
+ .App-link {
+   color: #09d3ac;
+ }
+
+ .apartment-card {
+   width: 350px;
+   height: auto;
+   margin: 1vmin;
+   margin-top: 2vmin;
+ }
+
+ .apartment-cards-container {
+   margin-top: 2vmin;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   /* height: 300px; */
+ }
+
+ .new-profile-form {
+   width: 50%;
+   text-align: -webkit-center;
+   margin: auto;
+ }
+
+ #submit {
+   cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"),
+   default;
+ }
+
+ img {
+   cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
+ }
