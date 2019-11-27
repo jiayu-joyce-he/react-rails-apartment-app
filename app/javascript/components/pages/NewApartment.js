@@ -147,12 +147,12 @@ class NewApartment extends Component {
           <br />
           <button
             type="button"
-            className= {this.state.form.street_a.length===0 || this.state.form.street_b.length===0 || this.state.form.city.length===0 || this.state.form.zipcode.length===0 || this.state.form.country.length===6 || this.state.form.contact_name.length===0 || this.state.form.contact_number.length===10 || this.state.form.state.length===0 || this.state.form.contact_hour === "When would you like to be contacted?"
-            ? "btn btn-primary" : "btn btn-success"}
+            className= {this.state.form.street_a.length===0 || this.state.form.street_b.length===0 || this.state.form.city.length===0 || this.state.form.zipcode.length!==5 || this.state.form.country.length===0 || this.state.form.contact_name.length===0 || this.state.form.contact_number.length!==10 || this.state.form.state.length===0 || this.state.form.contact_hour === "Choose..."
+            ? "btn btn-primary btn-lg" : "btn btn-success btn-lg"}
             id="submit"
-            onClick={this.handleClick}>Submit</button>
+            onClick={this.handleSubmit}>Submit</button>
             {this.state.success &&
-                <Redirect to="/apartments" />
+                <Redirect to="/" exact/>
             }
 
       </div>

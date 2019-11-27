@@ -8,7 +8,7 @@ class ApartmentsController < ApplicationController
   end
 
   def create
-    @apartment = current_user.apartments.new(apart_params)
+    @apartment = current_user.apartments.new(apartment_params)
 
     respond_to do |format|
       if @apartment.save

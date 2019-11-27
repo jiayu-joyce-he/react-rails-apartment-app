@@ -37,7 +37,7 @@ class NavBar extends React.Component {
         <div className={this.state.navbarDivClassName ? "navbar-collapse collapse" : "navbar-collapse collapse show"} id="navbarColor01">
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                    <Link className="nav-link" to="./new_apartment">List New Aparment</Link>
+                    <Link className="nav-link" to="./new_apartment"></Link>
                 </li>
                 <li className="nav-item">
                   <a className={this.props.current_user.logged_in ? "nav-link" : "btn btn-primary"} href={this.props.current_user.logged_in ? this.props.current_user.sign_out_route: this.props.current_user.sign_in_route}>{this.props.current_user.logged_in ? "Sign Out" : "Sign In"}</a>
