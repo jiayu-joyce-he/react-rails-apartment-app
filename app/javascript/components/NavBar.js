@@ -40,24 +40,9 @@ class NavBar extends React.Component {
                     <Link className="nav-link" to="./new_apartment">List New Aparment</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="./apartments">Apartment Listing</Link>
+                  <a className={this.props.current_user.logged_in ? "nav-link" : "btn btn-primary"} href={this.props.current_user.logged_in ? this.props.current_user.sign_out_route: this.props.current_user.sign_in_route}>{this.props.current_user.logged_in ? "Sign Out" : "Sign In"}</a>
                 </li>
-                {!this.props.current_user.logged_in &&
-                  <li className="nav-item">
-                      <a className="btn btn-primary" href="/users/sign_in">Sign In</a>
-                  </li>
-                }
 
-                {this.props.current_user.logged_in &&
-                  <li className="nav-item">
-                    <a className="nav-link" href={this.props.current_user.sign_in_route}>My Listing</a>
-                  </li>
-                }
-                {this.props.current_user.logged_in &&
-                  <li className="nav-item">
-                    <a className="nav-link" href={this.props.current_user.sign_out_route}>Sign Out</a>
-                  </li>
-                }
             </ul>
         </div>
       </nav>

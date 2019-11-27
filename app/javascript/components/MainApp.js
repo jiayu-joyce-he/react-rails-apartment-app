@@ -5,10 +5,11 @@ import { getApartments , createApartment } from '../api'
 
 
 import Home from './pages/Home'
+import NewApartment from './pages/NewApartment'
 import LogIn from './LogIn'
 import NavBar from "./NavBar"
 import ApartmentList from "./ApartmentList"
-import Apartments from './Apartments'
+import Header from './Header'
 
 
 class MainApp extends React.Component {
@@ -52,13 +53,12 @@ class MainApp extends React.Component {
     return (
       <Router>
         <NavBar current_user={this.props}/>
-        <Apartments />
+        <Header />
 				<Switch>
           <Route path="/LogIn" exact component={LogIn} />
-          <Route path="/apartments" render={( props) => <ApartmentList apartments={this.state.apartments}/> } />
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact render={( props) => <ApartmentList apartments={this.state.apartments}/> } />
+          <Route path="/new_apartment" render={( props) => <NewApartment handleNewApartment={this.handleNewApartment} /> } />
 				</Switch>
-
 			</Router>
     );
   }

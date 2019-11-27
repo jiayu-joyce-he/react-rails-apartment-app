@@ -22,7 +22,6 @@ const createApartment = function(apartment) {
 		method: "POST"  // <- Here's our verb, so the correct endpoint is invoked on the server
 	})
 		.then((resp) => {
-			console.log(resp)
 			let json = resp.json()
 			return json
 		})
