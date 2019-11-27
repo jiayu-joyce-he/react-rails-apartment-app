@@ -10,16 +10,19 @@ class LogIn extends React.Component {
       sign_out_route
     } = this.props
 
+
+
     return (
       <React.Fragment>
         {logged_in &&
           <div>
-            <a class="btn btn-outline-primary btn-lg btn-block" href={sign_out_route}>Sign Out</a>
+            <a className="btn btn-outline-primary btn-lg my-2 my-sm-0" href={sign_out_route}>Sign Out</a>
+            <a className="btn btn-primary btn-lg my-2 my-sm-0" href={sign_in_route}>My Listing</a>
           </div>
         }
         {!logged_in &&
           <div>
-            <a class="btn btn-primary btn-lg btn-block" href={sign_in_route}>Sign In</a>
+            <a className="btn btn-primary btn-lg my-2 my-sm-0" href={sign_in_route}>Sign In</a>
           </div>
         }
 

@@ -33,7 +33,7 @@ class Apartments extends React.Component {
     const noApartment = (
       <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
         <h4>
-          No apartment yet. Why not <Link to="/new_recipe">Create One</Link>
+          No apartment yet. Why not <Link to="/new_apartment">Post New Listing</Link>
         </h4>
       </div>
     );
@@ -46,9 +46,9 @@ class Apartments extends React.Component {
             <p className="lead text-muted">
               We’ve pulled together our most popular Apartments
             </p>
-            <hr class="my-4" />
+            <hr className="my-4" />
             <p>Share you apartment listing here to find qualified match.</p>
-            <p class="lead">
+            <p className="lead">
               <Link to="/apartment" className="btn btn-primary btn-lg">
                 List New Apartment
               </Link>

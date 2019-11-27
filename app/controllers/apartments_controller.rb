@@ -15,7 +15,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: 'Apartment was successfully created.' }
         format.json { render :show, status: :created, location: @apartment }
       else
-        format.html { render :new }
+        format.html { render :new_apartment }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end
     end
@@ -48,6 +48,6 @@ class ApartmentsController < ApplicationController
 
     private
     def apartment_params
-        params.require(:apartment).permit(:street_a, :city)
+        params.require(:apartment).permit(:street_a, :street_b, :city, :zipcode, :state, :country, :contact_name, :contact_number, :contact_hour)
     end
 end

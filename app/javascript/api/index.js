@@ -24,7 +24,6 @@ const createApartment = function(apartment) {
 		.then((resp) => {
 			console.log(resp)
 			let json = resp.json()
-
 			return json
 		})
 }

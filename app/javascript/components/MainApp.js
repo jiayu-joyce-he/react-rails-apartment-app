@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { getApartments , createApartment } from '../api'
 
 
@@ -42,14 +42,21 @@ class MainApp extends React.Component {
     }
 
   render () {
+    const {
+          logged_in,
+          sign_in_route,
+          sign_out_route,
+          current_user_id
+        } = this.props
+
     return (
       <Router>
-        <NavBar />
+        <NavBar current_user={this.props}/>
         <Apartments />
 				<Switch>
-          <Route exact path="/" component={Home} />
           <Route path="/LogIn" exact component={LogIn} />
           <Route path="/apartments" render={( props) => <ApartmentList apartments={this.state.apartments}/> } />
+          <Route path="/" exact component={Home} />
 				</Switch>
 
 			</Router>
