@@ -5,12 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(email: "ml5403941@gmail.com", password: "hejiayu21")
+user1 = User.create(email: "ml5403941@gmail.com", password: "hejiayu21")
 
-User.create(email: "hello@world.edu", password: "123123123123")
+user2 = User.create(email: "hello@world.edu", password: "123123123123")
 
 Apartment.create(user_id: 1, street_a: "J street", street_b: "11th Broadway", city: "San Diego", zipcode: "92126", state: "CA", country: "USA", contact_name: "John Doe", contact_number: "123-456-789", contact_hour: "Afternoon")
 
 Apartment.create(user_id: 2, street_a: "X street", street_b: "1th Broadway", city: "San Diego", zipcode: "92126", state: "CA", country: "USA", contact_name: "John Doe", contact_number: "123-456-789", contact_hour: "Afternoon")
 
 Apartment.create(user_id: 2, street_a: "B street", street_b: "10th Broadway", city: "San Diego", zipcode: "92126", state: "CA", country: "USA", contact_name: "Jane Doe", contact_number: "123-456-789", contact_hour: "24/7")
+
+user1.apartments.create(street_a: "Street C", street_b: "Street A", city: "San Diego", zipcode: "92126", state: "CA", country: "USA", contact_name: "John Doe", contact_number: "123-456-789", contact_hour: "9am - 5pm")
+
+user2.apartments.create(street_a: "Street C", street_b: "Street B", city: "San Diego", zipcode: "92121", state: "CA", country: "USA", contact_name: "John Doe", contact_number: "123-456-789", contact_hour: "9am - 5pm")

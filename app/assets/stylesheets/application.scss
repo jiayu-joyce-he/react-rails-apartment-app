@@ -14,10 +14,6 @@
  *= require_self
  */
 
- nav {
-   margin-bottom: 0.3rem;
- }
-
  .App {
    text-align: center;
  }
@@ -45,7 +41,7 @@
    width: 350px;
    height: auto;
    margin: 1vmin;
-   margin-top: 2vmin;
+   // margin-top: 2vmin;
  }
 
  .apartment-cards-container {

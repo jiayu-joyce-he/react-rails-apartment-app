@@ -40,27 +40,27 @@ class Apartments extends React.Component {
 
     return (
       <>
-        <section className="jumbotron jumbotron-fluid text-center">
+        <section className="jumbotron">
           <div className="container py-5">
             <h1 className="display-4">Apartments for Everyone</h1>
             <p className="lead text-muted">
               We’ve pulled together our most popular Apartments
             </p>
+            <hr class="my-4" />
+            <p>Share you apartment listing here to find qualified match.</p>
+            <p class="lead">
+              <Link to="/apartment" className="btn btn-primary btn-lg">
+                List New Apartment
+              </Link>
+            </p>
           </div>
         </section>
-        <div className="py-5">
           <main className="container">
-            <div className="text-right mb-3">
-              <Link to="/apartment" className="btn custom-button">
-                Post New Apartment
-              </Link>
-            </div>
             <div className="row">
               {Apartments.length > 0 ? allApartments : noApartment}
             </div>
           </main>
-        </div>
-        <ApartmentList />
+
       </>
     );
   }

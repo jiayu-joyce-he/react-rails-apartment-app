@@ -14,14 +14,15 @@ class LogIn extends React.Component {
       <React.Fragment>
         {logged_in &&
           <div>
-            <a href={sign_out_route}>Sign Out</a>
+            <a class="btn btn-outline-primary btn-lg btn-block" href={sign_out_route}>Sign Out</a>
           </div>
         }
         {!logged_in &&
           <div>
-            <a href={sign_in_route}>Sign In</a>
+            <a class="btn btn-primary btn-lg btn-block" href={sign_in_route}>Sign In</a>
           </div>
         }
+
       </React.Fragment>
     );
   }

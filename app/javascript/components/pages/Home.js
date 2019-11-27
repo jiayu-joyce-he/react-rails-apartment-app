@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
+import Apartments from '../Apartments'
+import ApartmentList from "../ApartmentList"
 
  class Home extends Component {
    render() {
      return(
-       <h1>Home Page</h1>
+       <React.Fragment>
+         
+       </React.Fragment>
      )
    }
  }

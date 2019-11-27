@@ -9,10 +9,10 @@ class ApartmentList extends Component {
             <div className = "apartment-card">
                 <div className="card mb-3">
                   <h3 className="card-header">
-                    {apartment.zipcode}
+                    {`${apartment.street_a} & ${apartment.street_b}`}
                   </h3>
                   <div className="card-body">
-                    <h5 className="card-title" className='apartment-age'>{apartment.contact_name}</h5>
+                    <h5 className="card-title" className='apartment-age'>{`${apartment.contact_name} ${apartment.contact_number}  `}</h5>
                   </div>
                   <img style={{height: "auto", width: "100%", display: "block"}} src="https://live.staticflickr.com/68/172629460_f55d8b084d_z.jpg" alt="Card image" />
                   <div className="card-body">
@@ -23,7 +23,7 @@ class ApartmentList extends Component {
                      <a href="#" class="card-link">Delete</a>
                    </div>
                    <div className="card-footer text-muted">
-                     {`Joined at ${apartment.created_at.split("").slice(0,10).join("")}`}
+                     {`Posted at ${apartment.created_at.split("").slice(0,10).join("")}`}
                    </div>
                 </div>
                 </div>
