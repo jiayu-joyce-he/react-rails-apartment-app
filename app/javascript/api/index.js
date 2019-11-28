@@ -13,6 +13,19 @@ const getApartments = ()=>{
   })
 }
 
+const getApartment = ()=>{
+  return fetch("/apartment")
+  .then((response)=>{
+    if(response.status === 200){
+      return response.json()
+    }else{
+      return new Promise(()=>{
+        resolve({error: 'There was an error.'})
+      })
+    }
+  })
+}
+
 const createApartment = function(apartment) {
 	return fetch(BASE + '/apartments', {
 		body: JSON.stringify(apartment),  // <- we need to stringify the json for fetch

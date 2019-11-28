@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
+
 class ApartmentList extends Component {
+  const getApartment = ()=>{
+    return fetch("/apartment")
+    .then((response)=>{
+      if(response.status === 200){
+        return response.json()
+      }else{
+        return new Promise(()=>{
+          resolve({error: 'There was an error.'})
+        })
+      }
+    })
+  }
+
   render() {
     const { apartments } = this.props;
     const allApartments = apartments.map((apartment, index) => (
@@ -18,7 +32,7 @@ class ApartmentList extends Component {
             <p className="card-text" className='apartment-enjoys'>{apartment.streetA}</p>
             </div>
             <div className="card-body">
-               <a href="#" className="card-link">Save</a>
+               <a href="#" className="card-link">Show Details</a>
                <a href="#" className="card-link">Delete</a>
              </div>
              <div className="card-footer text-muted">
